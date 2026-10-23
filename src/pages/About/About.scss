@@ -1,0 +1,84 @@
+@use '../../partials/colors';
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: .5rem;
+    width: 85%;
+    max-width: 1024px;
+    background: var(--gobal-todo-app-primary-background-color);
+
+    h1,
+    h2 {
+        text-align: center;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        padding-bottom: 1rem;
+    }
+
+    .about-section,
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1 1 clamp(300px, 50%, 600px);
+        padding: 1rem;
+        border-radius: .5rem;
+        width: 100%;
+        list-style: none;
+        background: var(--gobal-todo-app-secondary-background-color);
+
+        .add-color,
+        .start-color,
+        .ongoing-color,
+        .done-color,
+        .undo-color,
+        .delete-color {
+            text-shadow: colors.$about-text-shadow;
+        }
+
+        .add-color {
+            color: colors.$about-add-color;
+        }
+
+        .start-color {
+            color: colors.$about-start-color;
+        }
+
+        .ongoing-color {
+            color: colors.$about-ongoing-color;
+        }
+
+        .done-color {
+            color: colors.$about-done-color;
+        }
+
+        .undo-color {
+            color: colors.$about-undo-color;
+        }
+
+        .delete-color {
+            color: colors.$about-delete-color;
+        }
+    }
+
+    @media (min-width: 933px) {
+
+        .about-section {
+
+            ul {
+                flex-direction: row;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@use '../../../partials/colors';
+
+.complete-msg {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    animation: fadeIn 1s ease-in-out, bounce 1s infinite alternate;
+    color: var(--global-color);
+    
+    p {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        border-radius: 10px;
+        box-shadow: colors.$todo-complete-msg-p-box-shadow;
+        background: var(--global-background-color);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}

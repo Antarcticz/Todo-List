@@ -1,0 +1,60 @@
+@use "./partials/colors";
+@use "./partials/theme";
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: colors.$global-color;
+}
+
+body,
+html, #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    scroll-behavior: smooth;
+    height: 100%;
+    min-width: 400px;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/*_________________________________MISC___________________________________*/
+h4 {
+    font-size: 19px;
+}
+
+p {
+    font-size: 16px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*_________________________________MEDIA QUERY'S__________________________*/
+@media (min-width: 540px) {
+    h4 {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 933px) {
+    h4 {
+        font-size: 28px;
+    }
+}

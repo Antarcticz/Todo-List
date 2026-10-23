@@ -1,0 +1,118 @@
+@use "../../partials/colors";
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--gobal-todo-app-primary-background-color);
+    padding: 1rem 2rem;
+
+    .brand-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        h2 {
+            font-family: "Dancing Script", cursive;
+            font-weight: 700;
+            font-size: 26px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    .theme-toggle {
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+        background: none;
+        margin-left: 1rem;
+    }
+
+    .nav-links-container {
+        width: 75%;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+        background: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        width: 100%;
+        max-height: 0;
+        gap: 1rem;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        background: none;
+
+        &.open {
+            max-height: 500px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            width: 100%;
+
+            li {
+                text-align: center;
+                padding: 1rem 0;
+                width: 100%;
+                border-bottom: 1px solid var(--global-color);
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    font-size: 18px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .nav-links-desktop {
+        display: none;
+
+        a:hover {
+            color: colors.$nav-links-desktop-a-hover;
+        }
+    }
+
+    @media (min-width: 933px) {
+        flex-direction: column;
+
+        .brand-container {
+            h2 {
+                margin: auto;
+                font-size: 60px;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .nav-links-desktop {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+        }
+    }
+}

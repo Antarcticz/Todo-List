@@ -1,0 +1,26 @@
+@use '../../partials/colors';
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    background: var(--gobal-todo-app-primary-background-color);
+
+    a[href*="linkedin"] svg:hover,
+    a[href*="github"] svg:hover,
+    a[href*="facebook"] svg:hover {
+        path {
+            fill: colors.$footer-icon-hover-color;
+        }
+    }
+}
+
+@media (min-width: 933px) {
+    footer {
+        flex-direction: row;
+        white-space: nowrap;
+    }
+}
